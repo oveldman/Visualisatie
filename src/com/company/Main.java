@@ -114,7 +114,7 @@ public class Main extends PApplet{
     }
 
     public void setShape(Earthquake earthquake){
-        float m = map(earthquake.getLatitude(), 63.1f, 66.8f, 0, height);
+        float m = map(earthquake.getLatitude(), 66.8f, 63.1f, 0, height);
         float n = map(earthquake.getLongitude(), -25.0f, -13.0f, 0, width);
         if(earthquake.getSize() < 0.5) {
             ellipse(n, m, 20f, 20f);
@@ -123,7 +123,7 @@ public class Main extends PApplet{
                 triangle(n+10,m-10,n-10,m-10,n,m-30);
             }else{
                 if(earthquake.getSize() < 2){
-                    rect(m,n,20,20);
+                    rect(n,m,20,20);
                 }else{
                     if(earthquake.getSize() < 4) {
                         triangle(n+10,m+10,n-10,m-10,n+10,m-10);
